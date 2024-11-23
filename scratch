@@ -1,44 +1,4 @@
-// -*- mode: jsonc -*-
-{
-    // "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar position (top|bottom|left|right)
-    // "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
-    "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
-        "custom/media"
-    ],
-    "modules-center": [
-        "clock",
-        "custom/notification"
-    ],
-    "modules-right": [
-        "custom/mediaplayer",
-        "custom/media",
-        "idle_inhibitor",
-        "pulseaudio",
-        "network",
-        "backlight",
-        "battery",
-        "tray",
-        "custom/power"
-    ],
-    // Modules configuration
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}: {name}",
-        "format-icons": {
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
-    },
+
     "keyboard-state": {
         // "numlock": true,
         "capslock": true,
@@ -161,7 +121,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}\t{format_source}",
+        "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -223,4 +183,3 @@
       "on-click-right": "swaync-client -d -sw",
       "escape": true
   }
-}
