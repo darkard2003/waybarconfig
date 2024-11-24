@@ -33,10 +33,10 @@
         "warp-on-scroll": false,
         "format": "{icon} {name}",
         "format-icons": {
-          // 1 for terminal, 2 for browser, 3 for music, 4 for others
             "1": " ",
-            "2": " ",
-            "3": " ",
+            "2": " ", 
+            "3": " ",
+            "4": " ",
             "urgent": " ",
             "focused": " ",
             "default": " "
