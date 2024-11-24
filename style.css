@@ -27,25 +27,25 @@ button:hover {
 }
 
 #pulseaudio:hover {
-    background-color: #a37800;
+    background-color: #00ffcc;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #00ffcc;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 255, 204, 0.2);
 }
 
 #workspaces button.urgent {
-    color: #eb4d4b;
+    color: #ff00ff;
 }
 
 #mode {
-    color: #64727D;
+    color: #00ffcc;
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -63,7 +63,7 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-    color: #26A65B;
+    color: #00ffcc;
 }
 
 @keyframes blink {
@@ -73,7 +73,7 @@ button:hover {
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
+    color: #ff00ff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -86,89 +86,89 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    color: #f53c3c;
+    color: #ff00ff;
 }
 
 #power-profiles-daemon.balanced {
-    color: #2980b9;
+    color: #00ccff;
 }
 
 #power-profiles-daemon.power-saver {
-    color: #2ecc71;
+    color: #00ffcc;
 }
 
 label:focus {
-    color: #000000;
+    color: #00ffcc;
 }
 
 #cpu {
-    color: #2ecc71;
+    color: #00ffcc;
 }
 
 #memory {
-    color: #9b59b6;
+    color: #ff00ff;
 }
 
 #disk {
-    color: #964B00;
+    color: #ff6600;
 }
 
 #backlight {
-    color: #90b1b1;
+    color: #00ffcc;
 }
 
 #network {
-    color: #2980b9;
+    color: #00ccff;
 }
 
 #network.disconnected {
-    color: #f53c3c;
+    color: #ff00ff;
 }
 
 #pulseaudio {
-    color: #f1c40f;
+    color: #ffcc00;
 }
 
 #pulseaudio.muted {
-    color: #90b1b1;
+    color: #00ffcc;
 }
 
 #pulseaudio:hover {
-    color: #f1c40f;
-    background-color: #2d2d2d;
+    color: #ffcc00;
+    background-color: #000000;
 }
 
 #wireplumber {
-    color: #fff0f5;
+    color: #ffccff;
 }
 
 #wireplumber.muted {
-    color: #f53c3c;
+    color: #ff00ff;
 }
 
 #custom-media {
-    color: #66cc99;
+    color: #00ffcc;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    color: #66cc99;
+    color: #00ffcc;
 }
 
 #custom-media.custom-vlc {
-    color: #ffa000;
+    color: #ffcc00;
 }
 
 #temperature {
-    color: #f0932b;
+    color: #ff6600;
 }
 
 #temperature.critical {
-    color: #eb4d4b;
+    color: #ff00ff;
 }
 
 #tray {
-    color: #2980b9;
+    color: #00ccff;
 }
 
 #tray > .passive {
@@ -177,44 +177,44 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    color: #eb4d4b;
+    color: #ff00ff;
 }
 
 #idle_inhibitor {
-    color: #2d3436;
+    color: #00ffcc;
 }
 
 #idle_inhibitor.activated {
-    color: #2d3436;
+    color: #00ffcc;
 }
 
 #mpd {
-    color: #66cc99;
+    color: #00ffcc;
 }
 
 #mpd.disconnected {
-    color: #f53c3c;
+    color: #ff00ff;
 }
 
 #mpd.stopped {
-    color: #90b1b1;
+    color: #00ffcc;
 }
 
 #mpd.paused {
-    color: #51a37a;
+    color: #00ffcc;
 }
 
 #language {
-    color: #00b093;
-    background: #2d2d2d;
+    color: #00ffcc;
+    background: #000000;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    color: #97e1ad;
-    background: #2d2d2d;
+    color: #00ffcc;
+    background: #000000;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -225,11 +225,11 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 255, 204, 0.2);
 }
 
 #scratchpad {
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 255, 204, 0.2);
 }
 
 #scratchpad.empty {
@@ -242,25 +242,25 @@ label:focus {
 
 #privacy-item {
     padding: 0 5px;
-    color: white;
+    color: #ffffff;
 }
 
 #privacy-item.screenshare {
-    color: #cf5700;
+    color: #ff6600;
 }
 
 #privacy-item.audio-in {
-    color: #1ca000;
+    color: #00ffcc;
 }
 
 #privacy-item.audio-out {
-    color: #0069d4;
+    color: #00ccff;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: #2d2d2d;
+    background-color: #000000;
     border-radius: 25px;
     padding: 5px 10px;
     margin-top: 5px;
@@ -297,11 +297,11 @@ label:focus {
 #custom-notification,
 #idle_inhibitor,
 #privacy-item {
-    background-color: #2d2d2d;
-    color: #ffffff;
+    background-color: #000000;
+    color: #00ffcc;
     padding: 0 6;
 }
 
 #idle_inhibitor.activated {
-    color: #ffffff;
+    color: #00ffcc;
 }
