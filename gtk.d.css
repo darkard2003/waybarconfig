@@ -1,0 +1,16 @@
+@define-color {
+    color-primary: #00ffcc;
+    color-secondary: #ff00ff;
+    color-tertiary: #00ccff;
+    color-warning: #ff6600;
+    color-background: #000000;
+    color-foreground: #ffffff;
+    color-yellow: #ffcc00;
+    color-transparent: rgba(0, 0, 0, 0);
+    color-dim: rgba(0, 255, 204, 0.2);
+    color-pink: #ffccff;
+}
+
+@custom-selector :--gtk-button button;
+@custom-selector :--gtk-window window;
+@custom-selector :--gtk-module .modules-left, .modules-center, .modules-right;

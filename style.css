@@ -1,12 +1,23 @@
+@define-color color-primary #00FFEE;
+@define-color color-secondary #00FFFF;
+@define-color color-tertiary #00CCCC;
+@define-color color-warning #008888;
+@define-color color-background #001414;
+@define-color color-foreground #00FFEE;
+@define-color color-inactive #000808;
+@define-color color-urgent #002222;
+@define-color color-transparent rgba(0, 0, 0, 0);
+@define-color color-dim rgba(0, 255, 238, 0.2);
+
 * {
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: @color-transparent;
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    color: @color-foreground;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -23,30 +34,30 @@ button {
 
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px @color-foreground;
 }
 
 #pulseaudio:hover {
-    background-color: #00ffcc;
+    background-color: @color-primary;
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 255, 204, 0.2);
+    background: @color-dim;
 }
 
 #workspaces button.urgent {
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #mode {
-    color: #00ffcc;
-    box-shadow: inset 0 -3px #ffffff;
+    color: @color-primary;
+    box-shadow: inset 0 -3px @color-foreground;
 }
 
 #window,
@@ -63,17 +74,17 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 @keyframes blink {
     to {
-        color: #000000;
+        color: @color-background;
     }
 }
 
 #battery.critical:not(.charging) {
-    color: #ff00ff;
+    color: @color-secondary;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -86,89 +97,89 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #power-profiles-daemon.balanced {
-    color: #00ccff;
+    color: @color-tertiary;
 }
 
 #power-profiles-daemon.power-saver {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 label:focus {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #cpu {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #memory {
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #disk {
-    color: #ff6600;
+    color: @color-warning;
 }
 
 #backlight {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #network {
-    color: #00ccff;
+    color: @color-tertiary;
 }
 
 #network.disconnected {
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #pulseaudio {
-    color: #ffcc00;
+    color: @color-yellow;
 }
 
 #pulseaudio.muted {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #pulseaudio:hover {
-    color: #ffcc00;
-    background-color: #000000;
+    color: @color-yellow;
+    background-color: @color-background;
 }
 
 #wireplumber {
-    color: #ffccff;
+    color: @color-pink;
 }
 
 #wireplumber.muted {
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #custom-media {
-    color: #00ffcc;
+    color: @color-primary;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #custom-media.custom-vlc {
-    color: #ffcc00;
+    color: @color-yellow;
 }
 
 #temperature {
-    color: #ff6600;
+    color: @color-warning;
 }
 
 #temperature.critical {
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #tray {
-    color: #00ccff;
+    color: @color-tertiary;
 }
 
 #tray > .passive {
@@ -177,44 +188,44 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #idle_inhibitor {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #idle_inhibitor.activated {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #mpd {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #mpd.disconnected {
-    color: #ff00ff;
+    color: @color-secondary;
 }
 
 #mpd.stopped {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #mpd.paused {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #language {
-    color: #00ffcc;
-    background: #000000;
+    color: @color-primary;
+    background: @color-background;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    color: #00ffcc;
-    background: #000000;
+    color: @color-primary;
+    background: @color-background;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -225,11 +236,11 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    color: rgba(0, 255, 204, 0.2);
+    color: @color-dim;
 }
 
 #scratchpad {
-    color: rgba(0, 255, 204, 0.2);
+    color: @color-dim;
 }
 
 #scratchpad.empty {
@@ -242,25 +253,25 @@ label:focus {
 
 #privacy-item {
     padding: 0 5px;
-    color: #ffffff;
+    color: @color-foreground;
 }
 
 #privacy-item.screenshare {
-    color: #ff6600;
+    color: @color-warning;
 }
 
 #privacy-item.audio-in {
-    color: #00ffcc;
+    color: @color-primary;
 }
 
 #privacy-item.audio-out {
-    color: #00ccff;
+    color: @color-tertiary;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: #000000;
+    background-color: @color-background;
     border-radius: 25px;
     padding: 5px 10px;
     margin-top: 5px;
@@ -295,13 +306,8 @@ label:focus {
 #keyboard-state,
 #custom-power,
 #custom-notification,
-#idle_inhibitor,
 #privacy-item {
-    background-color: #000000;
-    color: #00ffcc;
-    padding: 0 6;
-}
-
-#idle_inhibitor.activated {
-    color: #00ffcc;
+    background-color: @color-background;
+    color: @color-foreground;
+    padding: 0 6px;
 }
