@@ -7,15 +7,15 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
+        "clock",
+        "custom/notification",
         "custom/media"
         // "mpd"
     ],
     "modules-center": [
-        "clock",
-        "custom/notification"
+        "sway/workspaces",
+        "sway/mode",
+        "sway/scratchpad",
     ],
     "modules-right": [
         "idle_inhibitor",
@@ -103,6 +103,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format": "  {:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },

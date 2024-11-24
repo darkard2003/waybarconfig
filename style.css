@@ -57,7 +57,6 @@ button:hover {
 
 #mode {
     color: @color-primary;
-    box-shadow: inset 0 -3px @color-foreground;
 }
 
 #window,
@@ -274,16 +273,11 @@ label:focus {
     background-color: @color-background;
     border-radius: 25px;
     padding: 5px 10px;
-    margin-top: 5px;
+    margin: 5px 10px;
+    border: 1px solid @color-dim; 
+    box-shadow: 0 0 5px @color-dim;
 }
 
-.modules-left {
-  margin-left: 10px;
-}
-
-.modules-right {
-  margin-right: 10px;
-}
 
 #clock,
 #battery,
