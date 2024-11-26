@@ -34,7 +34,7 @@ button {
 
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @color-foreground;
+    /* box-shadow: inset 0 -3px @color-foreground; */
 }
 
 #pulseaudio:hover {
@@ -45,14 +45,25 @@ button:hover {
     padding: 0 5px;
     background-color: transparent;
     color: @color-primary;
+    border-radius: 5;
 }
 
 #workspaces button:hover {
     background: @color-dim;
+    border: none;
 }
 
 #workspaces button.urgent {
+    color: @color-urgent;
+}
+
+#workspaces button.active {
     color: @color-secondary;
+}
+
+#workspaces button.visible {
+    color: @color-tertiary;
+    background: @color-dim;
 }
 
 #mode {
