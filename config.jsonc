@@ -7,6 +7,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/arch",
         "clock",
         "custom/notification",
         "custom/media"
@@ -257,5 +258,8 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+    "custom/arch": {
+        "format": " ",
     }
 }
