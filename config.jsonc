@@ -11,7 +11,6 @@
         "clock",
         "custom/notification",
         "custom/media"
-        // "mpd"
     ],
     "modules-center": [
         "sway/workspaces",
@@ -19,6 +18,7 @@
         "sway/scratchpad"
     ],
     "modules-right": [
+        "keyboard-state",
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -54,9 +54,9 @@
         }
     },
     "keyboard-state": {
-        // "numlock": true,
         "capslock": true,
         "format": "{name} {icon}",
+        "bind-keys": [1],
         "format-icons": {
             "locked": "",
             "unlocked": ""
@@ -126,9 +126,6 @@
         "format": "{}% "
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": [
@@ -188,8 +185,6 @@
         }
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        // "format-wifi": "{essid} ({signalStrength}%) ",
         "format-wifi": "{essid}    {bandwidthTotalBytes}",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ({signalStrength}%) ",
