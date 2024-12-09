@@ -1,11 +1,7 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    // "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
     "modules-left": [
         "custom/arch",
         "clock",
@@ -210,7 +206,8 @@
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+				"on-click": "kitty --config /dev/null --app-id user-dialog bluetui"
     },
     "network": {
         "format-wifi": "{bandwidthTotalBytes}",
@@ -220,8 +217,9 @@
         "tooltip-format-linked": "{ifname}: {ipaddr}/{cidr} ({bandwidthTotal})",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "interval": 1
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 1,
+				"on-click": "kitty --config /dev/null --app-id user-dialog nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

@@ -1,26 +1,32 @@
-@define-color color-primary #00FFEE;
-@define-color color-secondary #00FFFF;
-@define-color color-tertiary #00CCCC;
-@define-color color-warning #008888;
-@define-color color-background #001414;
-@define-color color-foreground #00FFEE;
-@define-color color-inactive #000808;
-@define-color color-urgent #002222;
+@import 'themes/mocha.css';
+
+@define-color color-primary @mauve;
+@define-color color-secondary @red;
+@define-color color-tertiary @blue;
+@define-color color-warning @peach;
+@define-color color-background @base;
+@define-color color-foreground @text;
+@define-color color-inactive @surface0;
+@define-color color-urgent @red;
 @define-color color-transparent rgba(0, 0, 0, 0);
-@define-color color-dim rgba(0, 255, 238, 0.2);
+@define-color color-dim alpha(@text, 0.2);
 
 * {
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
+    color: @text;
 }
 
 window#waybar {
-    background-color: @color-transparent;
+    background-color: @color-background;
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
     color: @color-foreground;
     transition-property: background-color;
     transition-duration: .5s;
+    transition-timing-function: ease;
+    border: 2px solid alpha(@crust, 0.3);
 }
+
 
 window#waybar.hidden {
     opacity: 0.2;
@@ -75,15 +81,16 @@ button:hover {
     margin: 0 4px;
 }
 
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
 
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: @color-primary;
 }
 
@@ -147,7 +154,7 @@ label:focus {
 }
 
 #pulseaudio {
-    color: @color-yellow;
+    color: @yellow;
 }
 
 #pulseaudio.muted {
@@ -155,7 +162,7 @@ label:focus {
 }
 
 #pulseaudio:hover {
-    color: @color-yellow;
+    color: @yellow;
     background-color: @color-background;
 }
 
@@ -177,7 +184,7 @@ label:focus {
 }
 
 #custom-media.custom-vlc {
-    color: @color-yellow;
+    color: @yellow;
 }
 
 #temperature {
@@ -192,11 +199,11 @@ label:focus {
     color: @color-tertiary;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     color: @color-secondary;
 }
@@ -241,11 +248,11 @@ label:focus {
     min-width: 16px;
 }
 
-#keyboard-state > label {
+#keyboard-state>label {
     padding: 0 5px;
 }
 
-#keyboard-state > label.locked {
+#keyboard-state>label.locked {
     color: @color-dim;
 }
 
@@ -254,7 +261,7 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 #privacy {
@@ -281,12 +288,7 @@ label:focus {
 .modules-left,
 .modules-center,
 .modules-right {
-    background-color: @color-background;
-    border-radius: 25px;
     padding: 5px 10px;
-    margin: 5px 10px;
-    border: 1px solid @color-dim; 
-    box-shadow: 0 0 5px @color-dim;
 }
 
 
